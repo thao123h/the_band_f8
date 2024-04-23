@@ -6,29 +6,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/themify-icons/themify-icons.css"
+    />
+
     <title>the band</title>
   </head>
-  <body>
-    <div id="main">
-      <div id="header">
-        <ul id="nav">
-          <li><a href="">Home</a></li>
-          <li><a href="">Band</a></li>
-          <li><a href="">Tour</a></li>
-          <li><a href="">Contact</a></li>
-          <li>
-            <a href="#">More</a>
-            <ul id="sub_nav">
-              <li><a href="">Merchandlise</a></li>
-              <li><a href="">Extras</a></li>
-              <li><a href="">Media</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <div id="slider"></div>
-      <div id="container"></div>
-      <div id="footer"></div>
+</head>
+<body>
+  <div id="main">
+    <div id="header">
+      <!-- Begin nav -->
+      <ul id="nav">
+        <li><a href="">Home</a></li>
+        <li><a href="">Band</a></li>
+        <li><a href="">Tour</a></li>
+        <li><a href="">Contact</a></li>
+        <li>
+          <a href="#">More
+            <span class="nav_arrow_down ti-angle-down"></span>
+            <!-- ti-angle-down là tên một class, nó đã được css bên file icons.csss
+              cho nên chỉ cần copy tên class này vào đây thì nó có thể hiện ra cái hình mũi tên đi xuống
+               Thế tại sao phải đặt thêm nav_arrow_down nữa làm gì ? sao không lấy tên class của chính nó mà css
+              Đó là bởi vì nếu sau muốn thay đổi icon thì mk chỉ cần thay
+            Thường thì dùng thẻ i mặc dù là in nghiêng nhưng mk có thể hiểu là icon cho dễ nhớ -->
+              
+          </a>
+          <ul id="sub_nav">
+            <li><a href="">Merchandlise</a></li>
+            <li><a href="">Extras</a></li>
+            <li><a href="">Media</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- End nav -->
+      <!-- Begin search_button -->
+      <!-- End search_button -->
+      <span class="search_header ti-search">
+
+      </span>
+
     </div>
-  </body>
+    <div id="slider"></div>
+    <div id="container"></div>
+    <div id="footer"></div>
+  </div>
+</body>
+
 </html>

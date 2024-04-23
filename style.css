@@ -10,10 +10,15 @@
 #header {
   height: 46.5px;
   background-color: #000;
+  display: flex;
+  justify-content: space-between;
 }
-sub,
-sub_nav {
+#nav,
+#sub_nav {
   list-style-type: none;
+}
+#header > ul {
+  display: inline-block;
 }
 #nav > li > a {
   text-transform: uppercase;
@@ -21,6 +26,16 @@ sub_nav {
 #nav > li {
   display: inline-block;
   position: relative;
+}
+#header .search_header {
+  color: white;
+  font-weight: bolder;
+  font-size: smaller;
+  padding: 15px 24px;
+}
+#header .search_header:hover {
+  background-color: #f44336;
+  cursor: pointer;
 }
 #nav > li a {
   color: #fff;
@@ -57,7 +72,6 @@ sub_nav {
   /* display: block; */
   width: 100%;
   padding: 8px 16px;
-
   /* thẻ li là block là để cho nó có thể chiếm chiều rôngj và bằng của thẻ cha ul ( mà ul trong
   th này là inline-block có chiều rộng bằng Merchandlise) nên khi các thẻ li (extras, media) là block thì nó có thể có chiều rộng bằng cr của ul= cr của merchanlise
   , tuy nhiên thẻ a cũng phải là block để chiếm cr của thẻ cha nó li vừa chiếm từ ul( ul chiếm từ mercha do inlineblock, cái này rộng nhất )  */
@@ -70,9 +84,12 @@ sub_nav {
   display: block;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+.nav_arrow_down {
+  font-size: 14px;
+}
 #slider {
   min-height: 500px;
- 
+}
 
 #container {
 }
