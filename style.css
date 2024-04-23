@@ -1,0 +1,81 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#main {
+}
+
+#header {
+  height: 46.5px;
+  background-color: #000;
+}
+sub,
+sub_nav {
+  list-style-type: none;
+}
+#nav > li > a {
+  text-transform: uppercase;
+}
+#nav > li {
+  display: inline-block;
+  position: relative;
+}
+#nav > li a {
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  padding: 14.05px 24px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#sub_nav > li > a:hover,
+#nav li:hover > a {
+  color: black;
+  background-color: #ccc;
+  /* Taị sao phải hover ở li mà ko p a?
+  Đó là bởi vì li là inline-block và nó sẽ bao các thẻ li của ul con thành 1 khối
+  cho nên khi chuột di vào More, thì nếu di chuột xuống ở phía các ô khác thì More nó 
+  vẫn giữ đc màu khi di chuột
+  - Còn nếu ko có sub-na như các ô home,band thì hover ở thẻ nào cũng đc , đều như nhau  */
+}
+/* #nav > li:hover > #sub_nav {
+  display: block;
+} */
+#nav #sub_nav {
+  position: absolute;
+  /* Khi #sub_nav có absolute thì all các thẻ con của nó có thuộc tính này, tức là nó sẽ nhảy ra
+  khỏi dòng chảy html thông thường và đi tìm thẻ cha nào có position và đứng trong đó, hoặc đứng sau
+  tất cả các thẻ con của thẻ cha, cho nên  merchandise,extra, media sẽ theo thứ tự nhảy về thẻ li cha _More có đặc tính là position
+  _ Lưu ý là nó vẫn có hoặc bị áp đặt bởi các đặc tính của thẻ cha nếu có chứ ko mất đi  */
+  background-color: #fff;
+  display: none;
+}
+
+#sub_nav > li > a {
+  color: #000 !important;
+  /* display: block; */
+  width: 100%;
+  padding: 8px 16px;
+
+  /* thẻ li là block là để cho nó có thể chiếm chiều rôngj và bằng của thẻ cha ul ( mà ul trong
+  th này là inline-block có chiều rộng bằng Merchandlise) nên khi các thẻ li (extras, media) là block thì nó có thể có chiều rộng bằng cr của ul= cr của merchanlise
+  , tuy nhiên thẻ a cũng phải là block để chiếm cr của thẻ cha nó li vừa chiếm từ ul( ul chiếm từ mercha do inlineblock, cái này rộng nhất )  */
+}
+#sub_nav li {
+  display: block;
+  min-width: 160px;
+}
+#nav > li:hover > #sub_nav {
+  display: block;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+#slider {
+  min-height: 500px;
+ 
+
+#container {
+}
+
+#footer {
+}
