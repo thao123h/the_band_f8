@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #main {
@@ -16,14 +17,18 @@
   top: 0;
   right: 0;
   left: 0;
+  z-index: 1;
+  /* bởi vì cái này có position là fixed: nó sẽ trôi nổi lên hoặc chìm xuống so vs mặt phẳng
+  cho nên các phần khác(vd-slider) có thể đè lên nó(nếu nó chìm) cho nên z-index:1 thì cái này sẽ chồng lên slider có positon nhưng 
+  ko có z-index -mặc định là 0  */
 }
 #nav,
 #sub_nav {
   list-style-type: none;
 }
-#header > ul {
+/* #header > ul {
   display: inline-block;
-}
+} */
 #nav > li > a {
   text-transform: uppercase;
 }
@@ -35,7 +40,7 @@
   color: white;
   font-weight: bolder;
   font-size: smaller;
-  padding: 15px 24px;
+  padding: 10px 24px;
 }
 #header .search_header:hover {
   background-color: #f44336;
@@ -58,9 +63,7 @@
   vẫn giữ đc màu khi di chuột
   - Còn nếu ko có sub-na như các ô home,band thì hover ở thẻ nào cũng đc , đều như nhau  */
 }
-/* #nav > li:hover > #sub_nav {
-  display: block;
-} */
+
 #nav #sub_nav {
   position: absolute;
   /* Khi #sub_nav có absolute thì all các thẻ con của nó có thuộc tính này, tức là nó sẽ nhảy ra
@@ -92,15 +95,46 @@
   font-size: 14px;
 }
 #slider {
-  min-height: 500px;
+  position: relative;
+  /* Đưa ảnh vào đúng tỉ lệ - đẹp  bằng background image */
   margin-top: 46.5px;
   /*  phai margin top = chieu cao header vi header co position:fixed nen nó trôi lên và bị chiếm không gian
   nên muốn phần slider tính từ header trở đi thì margin top bằng chiều cao header */
-  background-color: #ccc;
+  padding-top: 50%;
+  /* Tại sao lại là padding-top:50%? Là bởi vì ảnh đc đưa vào có tỉ lệ là 2:1, cr=2cd, mà có nguyên tắc là nếu 
+  đưa ảnh vào thì đưa theo đúng tỉ lệ của ảnh để ảnh k biến dạng. Và khi padding top 50% thì chiều cao của class slider sẽ là b
+  bằng 50% chiều ngang của  thẻ cha( trong th này chiều rộng thẻ cha của slider là thẻ html )chính nó . CHo nên luôn đảm bảo là cr =2cd*/
+  background: url("/f8_band/assets/img/chicago.jpg") left top/ cover no-repeat;
+  /* Khi sử dụng background image thì mặc định nó đổ từ padding, nên mặc dù khối slider chỉ có padding thì nó đổ mỗi padding luôn
+  cho nên đảm bảo ảnh đưa vào luôn đúng tỉ lệ theo ảnh gốc nhờ padding 50% kết hợp vs background-image
+  còn tại sao dùng cover mà k dùng contain. Đó là bởi vì cover nó lấy chiều nào dài hơn và sẽ chiếm hết chiều đó, và chiều còn lại nó cũng sẽ chiếm hết( chiều này 
+  có thể bị cắt- tuy nhiên vì mk làm đungs tỉ lệ cho class slider nên ảnh sẽ lôi ra và đúng tỉ lệ nên ko bị cắt đi phần nào )  */
+  /* left-top: position( cáci này tùy - nhưng phải có trong background image) */
+  /* Tuy nhiên phải lưu ý là nếu sau đó tiếp tục thêm thẻ gì vào slider thì đó là phần content của slider, khi đó kích thước của slider lại tăng thêm-bị thay đổi=>tỉ lệ
+  ảnh lại khác đi . Cho nên nếu muốn để nó chỉ là padding riêng thôi thì chỉ để riêng cho nó một class hình ảnh riêng và không thêm content hay các thẻ khác là con là thẻ 
+  chứa hình ảnh nữa. nếu thêm thì đó phải có position:absolute và class cha(chứa hình ảnh) phải có position:relative
+  thì khi đó cái thẻ con nó nổi lên trên cha và ko chiếm diện tích )  */
 }
+#slider .text_content {
+  color: white;
 
+  position: absolute;
+  bottom: 47px;
+  /* left: 50%;
+  transform: translateX(-50%);  */
+  text-align: center;
+  width: 100%;
+}
+#slider .text_heading {
+  margin-bottom: 14.4px;
+  font-weight: lighter;
+  font-size: 24px;
+}
+#slider .text_description {
+  font-weight: bolder;
+  font-size: 15px;
+}
 #container {
 }
-
 #footer {
 }
