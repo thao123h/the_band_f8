@@ -136,5 +136,47 @@
 }
 #container {
 }
+.content_section {
+  width: 800px;
+  padding: 64px 16px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.content_section .content-heading {
+  margin: 10px 0;
+  font-size: 30px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+}
+.content_section .sub-content {
+  font-size: 15px;
+  opacity: 0.6;
+  font-style: italic;
+}
+.content_section .about_decription {
+  margin: 15px 0;
+  font-size: 15px;
+  line-height: 1.4;
+  text-align: justify;
+}
+.member_band {
+  padding: 32px 0;
+  display: flex;
+  justify-content: space-around;
+}
+.member {
+  display: inline-block;
+}
+.member_band .name {
+  margin: 15px 0;
+  font-size: 15px;
+}
+.member_band img {
+  height: 144px;
+  width: 144px;
+  margin-bottom: 16px;
+  border-radius: 4px;
+}
 #footer {
 }
