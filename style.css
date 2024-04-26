@@ -139,7 +139,7 @@
 .content_section {
   width: 800px;
   padding: 64px 16px;
-  text-align: center;
+  /* text-align: center; */
   margin-left: auto;
   margin-right: auto;
 }
@@ -148,11 +148,14 @@
   font-size: 30px;
   font-weight: lighter;
   letter-spacing: 2px;
+  text-align: center;
 }
 .content_section .sub-content {
   font-size: 15px;
   opacity: 0.6;
   font-style: italic;
+  text-align: center;
+  margin-top: 15px;
 }
 .content_section .about_decription {
   margin: 15px 0;
@@ -164,6 +167,7 @@
   padding: 32px 0;
   display: flex;
   justify-content: space-around;
+  text-align: center;
 }
 .member {
   display: inline-block;
@@ -177,6 +181,72 @@
   width: 144px;
   margin-bottom: 16px;
   border-radius: 4px;
+}
+#tour {
+  /* display: inline-block; */
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+}
+#tour .book_tickets {
+  margin-top: 30px;
+  background-color: #fff;
+}
+#tour li {
+  padding: 8px 16px;
+  list-style-type: none;
+  background-color: #fff;
+  color: #757575;
+  font-size: 15px;
+}
+#tour li .sold_out {
+  padding: 0 8px;
+  margin: 16px;
+  color: #fff;
+  background-color: #f44336;
+}
+#tour .places_buy_ticket {
+  padding: 32px 0;
+  display: flex;
+  justify-content: space-between;
+}
+#tour .place {
+  width: 228px;
+  font-size: 15px;
+  background-color: #fff;
+  color: #000;
+}
+#tour .place .place_img {
+  width: 228px;
+}
+/* #tour .place_text {
+  margin: 15px 16px;
+} */
+.place_name,
+.place_date,
+.place_des,
+.place_buy {
+  margin: 15px;
+}
+.place_buy {
+  display: inline-block;
+  margin-top: 0px;
+  padding: 8px 16px;
+  background-color: #000;
+  color: #fff;
+}
+.place_buy:hover {
+  cursor: pointer;
+  color: #000 !important;
+  background-color: #ccc !important;
+}
+.w3-black,
+.w3-hover-black:hover {
+}
+.place_date {
+  opacity: 0.6;
+}
+#tour .content_section {
 }
 #footer {
 }
