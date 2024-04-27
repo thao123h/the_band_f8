@@ -29,6 +29,9 @@
 /* #header > ul {
   display: inline-block;
 } */
+.clear {
+  clear: both;
+}
 #nav > li > a {
   text-transform: uppercase;
 }
@@ -182,11 +185,26 @@
   margin-bottom: 16px;
   border-radius: 4px;
 }
+/* Tour */
 #tour {
   /* display: inline-block; */
   width: 100%;
   background-color: #000;
   color: #fff;
+}
+
+.quantity {
+  width: 24px;
+  height: 24px;
+  font-size: 15px;
+  padding: 0 8px;
+  line-height: 24px;
+  float: right;
+  margin-top: -3px;
+
+  border-radius: 50%;
+  background-color: #000;
+  display: block;
 }
 #tour .book_tickets {
   margin-top: 30px;
@@ -198,6 +216,8 @@
   background-color: #fff;
   color: #757575;
   font-size: 15px;
+  border-bottom: 1px solid #ccc;
+  display: block;
 }
 #tour li .sold_out {
   padding: 0 8px;
@@ -205,44 +225,63 @@
   color: #fff;
   background-color: #f44336;
 }
-#tour .places_buy_ticket {
-  padding: 32px 0;
-  display: flex;
-  justify-content: space-between;
+
+.places_buy_ticket {
+  margin: 32px -8px 48px -8px;
 }
-#tour .place {
-  width: 228px;
-  font-size: 15px;
-  background-color: #fff;
+.place {
+  float: left;
+  width: 33.3333%;
+  padding: 0 8px;
+  background-color: white;
+  background-clip: content-box;
   color: #000;
+  text-decoration: none;
 }
-#tour .place .place_img {
-  width: 228px;
+
+.place_img {
+  width: 100%;
 }
-/* #tour .place_text {
-  margin: 15px 16px;
-} */
-.place_name,
-.place_date,
-.place_des,
+.place_img:hover {
+  opacity: 0.6;
+}
+.place_content {
+  padding: 0 16px;
+  background-color: white;
+  font-size: 15px;
+}
+
+.place_name {
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+.place_date {
+  margin-top: 15px;
+}
+.place_des {
+  margin-top: 15px;
+  line-height: 1.4;
+  color: #757575;
+}
+
 .place_buy {
-  margin: 15px;
 }
+
 .place_buy {
   display: inline-block;
-  margin-top: 0px;
+  margin: 15px 0;
   padding: 8px 16px;
   background-color: #000;
   color: #fff;
+  text-decoration: none;
 }
 .place_buy:hover {
   cursor: pointer;
   color: #000 !important;
   background-color: #ccc !important;
 }
-.w3-black,
-.w3-hover-black:hover {
-}
+
 .place_date {
   opacity: 0.6;
 }
