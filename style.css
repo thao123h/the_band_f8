@@ -274,9 +274,6 @@
 }
 
 .place_buy {
-}
-
-.place_buy {
   display: inline-block;
   margin: 15px 0;
   padding: 8px 16px;
@@ -294,8 +291,7 @@
 .place_date {
   opacity: 0.6;
 }
-#tour .content_section {
-}
+
 #footer {
 }
 /* ----------------------------MODAL----------------------------- */
@@ -386,47 +382,7 @@ input {
 .model-footer a {
   color: #2196f3;
 }
-.contact-inf {
-  padding: 47px 0 32px 0;
-  font-size: 18px;
-}
-.contact-inf i {
-  margin-right: 10px;
-}
-.contact-text {
-  display: inline-block;
-  line-height: 1.4;
-}
-.contact-input {
-  display: inline-block;
-  float: right;
-}
-.contact-input .name-email-input {
-  padding: 8px;
-  width: 154px;
-  border: 0.8px solid #ccc;
-  margin-top: 0px;
-}
-.contact-input .name-email-input:nth-child(2) {
-  float: right;
-}
-.contact-input .mes-input {
-  width: 360px;
-  padding: 8px;
-  border: 0.8px solid #ccc;
-  display: block;
-}
-.contact-inf button {
-  padding: 8px 16px;
-  color: #fff;
-  margin: 16px 0;
-  background-color: #000;
-  border: none;
-  float: right;
-}
-/* .contact-button {
-  
-} */
+/* ---------------------CONTACT------------------------- */
 
 /* Tạo animation cho modal khi nhấn buy ticket  */
 @keyframes modalFadeIn {
