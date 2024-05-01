@@ -4,6 +4,25 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
+/* -----------Common classes------------- */
+.row {
+  margin-right: -8px;
+  margin-left: -8px;
+}
+.text-center {
+  text-align: center !important;
+}
+.col {
+  padding-left: 8px;
+  padding-right: 8px;
+  float: left;
+}
+.col-second {
+  width: 50%;
+}
+.col-third {
+  width: 33.3333%;
+}
 
 #main {
 }
@@ -123,8 +142,7 @@
 
   position: absolute;
   bottom: 47px;
-  /* left: 50%;
-  transform: translateX(-50%);  */
+
   text-align: center;
   width: 100%;
 }
@@ -166,15 +184,7 @@
   line-height: 1.4;
   text-align: justify;
 }
-.member_band {
-  padding: 32px 0;
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
-}
-.member {
-  display: inline-block;
-}
+
 .member_band .name {
   margin: 15px 0;
   font-size: 15px;
@@ -201,7 +211,7 @@
   line-height: 24px;
   float: right;
   margin-top: -3px;
-
+  color: #fff;
   border-radius: 50%;
   background-color: #000;
   display: block;
@@ -227,12 +237,10 @@
 }
 
 .places_buy_ticket {
-  margin: 32px -8px 48px -8px;
+  margin-top: 32px;
+  margin-bottom: 48px;
 }
 .place {
-  float: left;
-  width: 33.3333%;
-  padding: 0 8px;
   background-color: white;
   background-clip: content-box;
   color: #000;
@@ -378,6 +386,48 @@ input {
 .model-footer a {
   color: #2196f3;
 }
+.contact-inf {
+  padding: 47px 0 32px 0;
+  font-size: 18px;
+}
+.contact-inf i {
+  margin-right: 10px;
+}
+.contact-text {
+  display: inline-block;
+  line-height: 1.4;
+}
+.contact-input {
+  display: inline-block;
+  float: right;
+}
+.contact-input .name-email-input {
+  padding: 8px;
+  width: 154px;
+  border: 0.8px solid #ccc;
+  margin-top: 0px;
+}
+.contact-input .name-email-input:nth-child(2) {
+  float: right;
+}
+.contact-input .mes-input {
+  width: 360px;
+  padding: 8px;
+  border: 0.8px solid #ccc;
+  display: block;
+}
+.contact-inf button {
+  padding: 8px 16px;
+  color: #fff;
+  margin: 16px 0;
+  background-color: #000;
+  border: none;
+  float: right;
+}
+/* .contact-button {
+  
+} */
+
 /* Tạo animation cho modal khi nhấn buy ticket  */
 @keyframes modalFadeIn {
   from {
