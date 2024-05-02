@@ -12,16 +12,46 @@
 .text-center {
   text-align: center !important;
 }
+
+.mt8 {
+  margin-top: 8px !important;
+}
+.pull-right {
+  float: right !important;
+}
+.btn {
+  display: inline-block;
+  margin: 15px 0;
+  padding: 8px 16px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #757575;
+  color: #000;
+}
 .col {
   padding-left: 8px;
   padding-right: 8px;
   float: left;
+}
+.row::after {
+  content: "";
+  display: block;
+  /* lưu ý là clear both thì đi vs display:block  */
+  clear: both;
 }
 .col-second {
   width: 50%;
 }
 .col-third {
   width: 33.3333%;
+}
+.col-full {
+  width: 100%;
 }
 
 #main {
@@ -159,7 +189,7 @@
 }
 .content_section {
   width: 800px;
-  padding: 64px 16px;
+  padding: 64px 0 112px;
   /* text-align: center; */
   margin-left: auto;
   margin-right: auto;
@@ -192,7 +222,7 @@
 .member_band img {
   height: 144px;
   width: 144px;
-  margin-bottom: 16px;
+  /* margin-bottom: 16px; */
   border-radius: 4px;
 }
 /* Tour */
@@ -238,7 +268,7 @@
 
 .places_buy_ticket {
   margin-top: 32px;
-  margin-bottom: 48px;
+  /* margin-bottom: 48px; */
 }
 .place {
   background-color: white;
@@ -273,15 +303,6 @@
   color: #757575;
 }
 
-.place_buy {
-  display: inline-block;
-  margin: 15px 0;
-  padding: 8px 16px;
-  background-color: #000;
-  color: #fff;
-  text-decoration: none;
-  border: 0;
-}
 .place_buy:hover {
   cursor: pointer;
   color: #000 !important;
@@ -345,7 +366,7 @@
   padding: 0 16px;
 }
 .modal-body p,
-input {
+modal input {
   margin-top: 15px;
 }
 .ti-shopping-cart,
@@ -394,4 +415,49 @@ input {
     opacity: 1;
     transform: translateY(0);
   }
+}
+.contact-content {
+  padding-top: 47px;
+}
+.contact-inf {
+  font-size: 18px;
+}
+.contact-input {
+  font-size: 15px;
+}
+.contact-inf i {
+  width: 30px;
+  display: inline-block;
+  line-height: 1.4;
+}
+.contact-form .control-form {
+  padding: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.map-section img {
+  width: 100%;
+}
+#footer {
+  padding: 64px 16px;
+  color: #757575;
+  text-align: center;
+  font-size: 15px;
+}
+.footer-icon a {
+  text-decoration: none;
+  font-size: 24px;
+}
+.footer-icon i {
+  color: #757575;
+}
+.footer-icon i:hover {
+  opacity: 0.6;
+}
+#footer p {
+  margin: 15px 0;
+}
+#footer p a {
+  color: #757575;
 }
